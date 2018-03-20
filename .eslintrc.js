@@ -1,6 +1,5 @@
 module.exports = {
 	root: true,
-	plugins: ["prettier"],
 	env: {
 		browser: true,
 		node: true,
@@ -11,7 +10,6 @@ module.exports = {
 	},
 	extends: "eslint:recommended",
 	rules: {
-		"prettier/prettier": "error",
 		"no-undef": "error",
 		"no-extra-semi": "error",
 		"global-require": "off",
