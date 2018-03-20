@@ -1,8 +1,7 @@
 {
 	"name": "mywebpack",
 	"version": "1.5.1",
-	"description":
-		"Quick start a project with Webpack 4, Bootstrap 4 and Font Awesome 5",
+	"description": "Quick start a project with Webpack 4, Bootstrap 4 and Font Awesome 5",
 	"main": "index.js",
 	"scripts": {
 		"test": "npm run lint",
@@ -17,21 +16,18 @@
 		"type": "git",
 		"url": "git+https://github.com/GlBj/MyWebPack.git"
 	},
-	"keywords": ["Animate.css", "Bootstrap 4", "FontAwesome 5", "Webpack 4"],
+	"keywords": [
+		"Animate.css",
+		"Bootstrap 4",
+		"FontAwesome 5",
+		"Webpack 4"
+	],
 	"author": "Glenn Bjurestrand",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/GlBj/MyWebPack/issues"
 	},
 	"homepage": "https://github.com/GlBj/MyWebPack#readme",
-	"lint-staged": {
-		"*.scss": [
-			"stylelint --syntax=scss",
-			"prettier --parser postcss --write",
-			"git add"
-		],
-		"*.{js,jsx,json}": ["prettier --write", "git add"]
-	},
 	"devDependencies": {
 		"@fortawesome/fontawesome": "^1.1.4",
 		"@fortawesome/fontawesome-free-brands": "^5.0.8",
@@ -47,7 +43,6 @@
 		"clean-webpack-plugin": "^0.1.19",
 		"css-loader": "^0.28.11",
 		"eslint": "^4.19.0",
-		"eslint-plugin-prettier": "^2.6.0",
 		"exports-loader": "^0.7.0",
 		"extract-text-webpack-plugin": "^4.0.0-beta.0",
 		"file-loader": "^1.1.11",
@@ -55,13 +50,11 @@
 		"html-webpack-plugin": "^3.0.6",
 		"husky": "^0.14.3",
 		"jquery": "^3.3.1",
-		"lint-staged": "^7.0.0",
 		"node-sass": "^4.8.2",
 		"popper.js": "^1.14.1",
 		"postcss": "^6.0.20",
 		"postcss-loader": "^2.1.2",
 		"precss": "^3.1.2",
-		"prettier": "^1.11.1",
 		"sass-loader": "^6.0.7",
 		"style-loader": "^0.20.3",
 		"stylelint": "^9.1.3",
