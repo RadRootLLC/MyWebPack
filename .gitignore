@@ -8,6 +8,7 @@ node_modules/
 # Folders to ignore
 dist
 temp
+\[ Work \]
 
 # Files to ignore
 dist.zip
