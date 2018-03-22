@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #333;
-	background-color: #eee;
+	background-color: $gray-200;
 }
 
 .navbar {
@@ -20,9 +20,32 @@ body {
 	color: $tld-blue;
 }
 
-.jumbotron-training {
-	background-image: url("../images/training/header.jpg");
+.jumbotron {
 	background-color: transparent;
 	background-size: cover;
+	background-position: center center;
 	display: flex;
+}
+
+.jumbotron-training {
+	background-image: url("../images/tld/header-training.jpg");
+}
+
+.jumbotron-daycare {
+	background-image: url("../images/tld/header-daycare-boarding.jpg");
+}
+
+hr {
+	margin: 3.5rem 0;
+}
+
+table {
+	border: 2px solid $gray-500;
+}
+
+th, td {
+	border: 1px solid $gray-400;
+	text-align: center;
+	vertical-align: top;
+	background-color: $white;
 }
