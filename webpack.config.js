@@ -84,7 +84,15 @@ module.exports = {
 		new HtmlWebPackPlugin({
 			template: "src/index.html",
 			filename: "index.html"
-		})
+		}),
+		new HtmlWebPackPlugin({
+			template: "src/daycare-boarding.html",
+			filename: "daycare-boarding.html"
+		}),
+		new HtmlWebPackPlugin({
+			template: "src/training.html",
+			filename: "training.html"
+		}),
 	],
 	optimization: {
 		splitChunks: {
@@ -121,11 +129,12 @@ module.exports = {
 		}
 	},
 	devServer: {
-		host: "localhost",
+		host: "0.0.0.0",
 		port: 3000,
 		contentBase: "./public",
 		open: true,
 		inline: true,
+		index: 'index.html',
 		disableHostCheck: true,
 		watchOptions: {
 			aggregateTimeout: 300,
