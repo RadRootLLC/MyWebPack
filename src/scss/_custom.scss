@@ -6,9 +6,12 @@ body {
 	color: #333;
 	background-color: $gray-200;
 }
+h1, h2, h3 {
+	font-family: 'Delius', cursive;
+}
 
 .navbar {
-	opacity: 0.8;
+	background-color: $nav-background !important;
 }
 
 .navbar-brand {
@@ -16,23 +19,59 @@ body {
 	font-weight: bolder;
 }
 
+.navbar-expand-lg .nav-link {
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+	font-family: 'Delius', cursive;
+	font-size: 1.1rem;
+}
+
 .tld-blue {
 	color: $tld-blue;
 }
 
 .jumbotron {
+	color: $gray-300;
 	background-color: transparent;
 	background-size: cover;
 	background-position: center center;
 	display: flex;
 }
 
+.jumbotron .text-container {
+	background-color: rgba(39, 43, 48, .4)
+}
+
+.jumbotron h1 {
+	text-shadow: 2px 2px 4px $dark;
+}
+
+.jumbotron .lead {
+	text-shadow: 1px 1px 2px $dark;
+}
+
 .jumbotron-training {
 	background-image: url("../images/tld/header-training.jpg");
+	background-position: top center;
 }
 
 .jumbotron-daycare {
 	background-image: url("../images/tld/header-daycare-boarding.jpg");
+}
+
+.card {
+	margin-bottom: 1rem;
+}
+
+.card-header {
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: $white;
+	background-color: $tld-blue;
+}
+
+.card-body p:last-child {
+	margin-bottom: 0;
 }
 
 hr {

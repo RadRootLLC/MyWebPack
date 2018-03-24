@@ -1,4 +1,6 @@
 // Typography
+@import url('https://fonts.googleapis.com/css?family=Delius');
+
 $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 1rem;
 $line-height-base: 1.6;
@@ -7,6 +9,7 @@ $line-height-base: 1.6;
 // Color system
 //
 $tld-blue: #00a5b1;
+$nav-background: rgba(39, 43, 48, .8);
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
