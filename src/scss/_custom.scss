@@ -59,6 +59,11 @@ h1, h2, h3 {
 	background-image: url("../images/tld/header-daycare-boarding.jpg");
 }
 
+.jumbotron-about {
+	background-image: url("../images/tld/header-about.jpg");
+	background-position: top center;
+}
+
 .card {
 	margin-bottom: 1rem;
 }
@@ -72,6 +77,11 @@ h1, h2, h3 {
 
 .card-body p:last-child {
 	margin-bottom: 0;
+}
+
+.img-bio {
+	float: left;
+	margin-right: 1rem;
 }
 
 hr {

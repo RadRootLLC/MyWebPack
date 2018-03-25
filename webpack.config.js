@@ -93,6 +93,10 @@ module.exports = {
 			template: "src/training.html",
 			filename: "training.html"
 		}),
+		new HtmlWebPackPlugin({
+			template: "src/about.html",
+			filename: "about.html"
+		}),
 	],
 	optimization: {
 		splitChunks: {
