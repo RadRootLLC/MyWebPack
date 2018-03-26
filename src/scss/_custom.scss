@@ -11,6 +11,11 @@ h1, h2, h3 {
 	font-family: 'Delius', cursive;
 }
 
+.container > h2,
+.container > h3 {
+		margin-top: 2rem;
+}
+
 hr {
 	margin: 2.5rem 0;
 }
@@ -66,30 +71,27 @@ th, td {
 	text-shadow: 1px 1px 2px $dark;
 }
 
+// ------
+// Training
+// ------
 .jumbotron-training {
 	background-image: url("../images/tld/header-training.jpg");
 	background-position: top center;
 }
 
+// ------
+// Daycare
+// ------
 .jumbotron-daycare {
 	background-image: url("../images/tld/header-daycare-boarding.jpg");
 }
 
+// ------
+// About
+// ------
 .jumbotron-about {
 	background-image: url("../images/tld/header-about.jpg");
 	background-position: top center;
-}
-
-.jumbotron-contact {
-	background-image: url("../images/tld/header-contact.jpg");
-	background-position: top center;
-	height: 250px;
-}
-
-@include media-breakpoint-up(md) {
-	.jumbotron-contact {
-		height: 440px;
-  }
 }
 
 .card {
@@ -112,15 +114,39 @@ th, td {
 	margin-right: 1rem;
 }
 
-.container > h2,
-.container > h3 {
-		margin-top: 2rem;
+.card-columns {
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+}
+
+// -------
+// Contact
+// -------
+.jumbotron-contact {
+	background-image: url("../images/tld/header-contact.jpg");
+	background-position: top center;
+	height: 250px;
+}
+
+@include media-breakpoint-up(md) {
+	.jumbotron-contact {
+		height: 440px;
+  }
 }
 
 .contact li {
 	margin-top: 1rem;
 }
-
 
 fieldset {
 	padding: 10px;
