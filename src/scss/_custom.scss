@@ -31,6 +31,14 @@ th, td {
 	background-color: $white;
 }
 
+.fa-li {
+	color: $tld-blue;
+}
+
+.tld-blue {
+	color: $tld-blue;
+}
+
 .navbar {
 	background-color: $nav-background !important;
 }
@@ -45,10 +53,6 @@ th, td {
 	padding-right: 1rem !important;
 	font-family: 'Delius', cursive;
 	font-size: 1.1rem;
-}
-
-.tld-blue {
-	color: $tld-blue;
 }
 
 .jumbotron {
