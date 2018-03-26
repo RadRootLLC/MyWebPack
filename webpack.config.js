@@ -97,6 +97,10 @@ module.exports = {
 			template: "src/about.html",
 			filename: "about.html"
 		}),
+		new HtmlWebPackPlugin({
+			template: "src/contact.html",
+			filename: "contact.html"
+		}),
 	],
 	optimization: {
 		splitChunks: {
