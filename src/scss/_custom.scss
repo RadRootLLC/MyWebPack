@@ -137,7 +137,7 @@ fieldset {
 	width: 100%;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
 	.app label {
 		text-align: right;
 		display: inline-block;
