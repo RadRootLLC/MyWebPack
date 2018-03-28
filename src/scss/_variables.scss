@@ -88,67 +88,9 @@ $dropdown-link-hover-bg: $body-bg !default;
 
 $navbar-padding-y: 0 !default;
 $navbar-dark-color: $white !default;
-// $navbar-dark-hover-color: $white !default;
 $navbar-dark-active-color: $tld-blue !default;
-
-$navbar-light-hover-color: $gray-800 !default;
-$navbar-light-active-color: $gray-800 !default;
-
-// Pagination
-
-$pagination-color: $white !default;
-$pagination-bg: transparent !default;
-$pagination-border-color: rgba($black, 0.6) !default;
-
-$pagination-hover-color: $white !default;
-$pagination-hover-bg: transparent !default;
-$pagination-hover-border-color: rgba($black, 0.6) !default;
-
-$pagination-active-bg: transparent !default;
-$pagination-active-border-color: rgba($black, 0.6) !default;
-
-$pagination-disabled-bg: transparent !default;
-$pagination-disabled-border-color: rgba($black, 0.6) !default;
-
-// Jumbotron
-
-// $jumbotron-bg: darken($gray-900, 5%) !default;
 
 // Cards
 
 $card-border-color: rgba($black, 0.6) !default;
 $card-cap-bg: lighten($gray-800, 10%) !default;
-// $card-bg: lighten($body-bg, 5%) !default;
-
-// Popovers
-
-$popover-bg: lighten($body-bg, 5%) !default;
-
-// Modals
-
-$modal-content-bg: lighten($body-bg, 5%) !default;
-
-$modal-header-border-color: rgba(0, 0, 0, 0.2) !default;
-
-// Progress bars
-
-$progress-bg: darken($gray-900, 5%) !default;
-$progress-bar-color: $gray-600 !default;
-
-// List group
-
-$list-group-bg: lighten($body-bg, 5%) !default;
-$list-group-border-color: rgba($black, 0.6) !default;
-
-$list-group-hover-bg: lighten($body-bg, 10%) !default;
-$list-group-active-color: $white !default;
-$list-group-active-bg: $list-group-hover-bg !default;
-$list-group-active-border-color: $list-group-border-color !default;
-
-$list-group-disabled-color: $gray-700 !default;
-
-$list-group-action-color: $white !default;
-
-// Breadcrumbs
-
-$breadcrumb-active-color: $gray-500 !default;

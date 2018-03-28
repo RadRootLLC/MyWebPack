@@ -10,7 +10,7 @@
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container">
 			<a class="navbar-brand" href="./index.html">
-			<img src="images/tld/logo-dog.png" height="30px" alt="Tail Lights Dogs, LLC">tail<span class='tld-blue'>lights</span>dogs</a>
+			<img src="images/tld/logo-dog.png" height="30" alt="Tail Lights Dogs, LLC">tail<span class='tld-blue'>lights</span>dogs</a>
 			<button class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
@@ -62,7 +62,9 @@
 				</ul>
 			</div>
 			<div class="col-sm-8">
-				<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=284-E+Rocky+Creek+Road+Greenville,+SC+29615&amp;sll=37.0625,-95.677068&amp;sspn=43.037246,83.056641&amp;ie=UTF8&amp;hq=&amp;hnear=284+Rocky+Creek+Rd,+Greenville,+South+Carolina+29615&amp;ll=34.828459,-82.273693&amp;spn=0.021137,0.038538&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=284-E+Rocky+Creek+Road+Greenville,+SC+29615&amp;sll=37.0625,-95.677068&amp;sspn=43.037246,83.056641&amp;ie=UTF8&amp;hq=&amp;hnear=284+Rocky+Creek+Rd,+Greenville,+South+Carolina+29615&amp;ll=34.828459,-82.273693&amp;spn=0.021137,0.038538&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+				</div>
 			</div>
 		</div>
 
@@ -80,7 +82,7 @@
 					<input id="phone" name="phone" type="text" /></div>
 					<div class="row"><label for="email">Email</label>
 					<input id="email" name="email" type="text"/></div>
-					<div class="row"><label for="interest">Interests</label>
+					<div class="row"><label>Interests</label>
 						<input id="interests_boarding" name="interest[]" class="checkbox" type="checkbox" value="boarding"/><label for="interests_boarding" class="choice_chx">Boarding</label>
 						<input id="interests_daycare" name="interest[]" class="checkbox" type="checkbox" value="daycare"/><label for="interests_daycare" class="choice_chx">Daycare</label>
 						<input id="interests_training" name="interest[]" class="checkbox" type="checkbox" value="training"/><label for="interests_training" class="choice_chx">Training</label>
@@ -91,13 +93,13 @@
 					<input id="dog_breed" name="dog_breed" type="text"/></div>
 					<div class="row"><label for="dog_age">Dog&#8217;s Age</label>
 					<input id="dog_age" name="dog_age" type="text"/></div>
-					<div class="row"><label for="dog_gender">Dog&#8217;s Gender</label>
+					<div class="row"><label>Dog&#8217;s Gender</label>
 						<input id="dog_male" name="dog_gender" value="male" type="radio" class="radio"><label for="dog_male" class="choice">Male</label>
 						<input id="dog_female" name="dog_gender" value="female" type="radio" class="radio"><label for="dog_female" class="choice">Female</label>
 					</div>
 					<div class="row"><label for="adoption_date">Date of Adoption</label>
 					<input id="adoption_date" name="adoption_date" type="text"/></div>
-					<div class="row"><label for="current_med_vacc">Current on medical care and vaccinations?</label>
+					<div class="row"><label>Current on medical care and vaccinations?</label>
 						<input id="yes" name="current_med_vacc" value="yes" type="radio" class="radio"><label for="yes" class="choice">Yes</label>
 						<input id="no" name="current_med_vacc" value="no" type="radio" class="radio"><label for="no" class="choice">No</label>
 					</div>
@@ -118,6 +120,7 @@
 			</div><!-- col -->
 		</div><!-- row -->
 	</div>
+
 	<footer>
 		<div class='container'>
 			<div class="row">
