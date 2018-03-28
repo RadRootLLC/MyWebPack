@@ -95,6 +95,29 @@ footer .contact {
 	color: $gray-300;
 }
 
+.testimonial {
+	font-family: 'Delius', cursive;
+	text-align: center;
+}
+
+.testimonial blockquote {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	line-height: 3rem;
+}
+
+.testimonial blockquote::before {
+	content: url("../images/tld/quote-start.png");
+}
+
+.testimonial blockquote::after {
+	content: url("../images/tld/quote-end.png");
+}
+
+// .testimonial cite {
+// 	margin-top: -1rem;
+// }
+
 // -------
 // home
 // --------
