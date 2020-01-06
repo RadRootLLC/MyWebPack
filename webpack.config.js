@@ -1,11 +1,11 @@
-const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require("path")
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const extractSass = new ExtractTextPlugin({
 	filename: "[name].css",
 	disable: process.env.NODE_ENV === "development"
-});
+})
 module.exports = {
 	target: "web",
 	devtool: "source-map",
@@ -25,7 +25,7 @@ module.exports = {
 				use: {
 					loader: "babel-loader",
 					options: {
-						presets: ["env", "minify"]
+						presets: ["@babel/preset-env"]
 					}
 				}
 			},
@@ -44,13 +44,6 @@ module.exports = {
 					use: [
 						{
 							loader: "css-loader",
-							options: {
-								minimize: {
-									discardComments: {
-										removeAll: true
-									}
-								}
-							}
 						},
 						{
 							loader: "postcss-loader"
@@ -72,6 +65,7 @@ module.exports = {
 							name: "[path][name].[ext]",
 							outputPath: "images/",
 							context: 'src/images',
+							esModule: false,
 						}
 					}
 				]
@@ -79,7 +73,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin(["dist"]),
+		new CleanWebpackPlugin(),
 		extractSass,
 		new HtmlWebPackPlugin({
 			template: "src/index.html",
@@ -149,4 +143,4 @@ module.exports = {
 			poll: 1000
 		}
 	}
-};
+}
