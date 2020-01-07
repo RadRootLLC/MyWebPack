@@ -8,7 +8,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-	font-family: 'Delius', cursive;
+	font-family: 'Source Sans Pro', sans-serif;
 	margin-bottom: 1rem;
 }
 
@@ -88,8 +88,8 @@ th, td {
 }
 
 .card-title {
-	font-family: 'Delius', cursive;
-	font-size: 1.5rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
 	margin-bottom: 1rem;
 }
 
@@ -148,7 +148,6 @@ iframe {
 	h2 {
 		font-size: 1rem;
 	}
-
 }
 
 @include media-breakpoint-up(md) {
@@ -233,7 +232,6 @@ iframe {
 }
 
 .card-header {
-	font-size: 1.1rem;
 	font-weight: bold;
 	color: $white;
 	background-color: $tld-blue;
