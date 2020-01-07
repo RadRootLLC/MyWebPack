@@ -42,11 +42,20 @@ th, td {
 }
 
 .navbar {
-	background-color: $nav-background !important;
+	background-color: $nav-background;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: lowercase;
+}
+
+@supports (backdrop-filter: saturate(250%) blur(20px)) or (-webkit-backdrop-filter: saturate(250%) blur(20px)) {
+  .navbar {
+    background-color: $nav-background-blur;
+    -webkit-backdrop-filter: saturate(250%) blur(20px);
+    backdrop-filter: saturate(250%) blur(20px);
+  }
 }
 
 .navbar-brand {
-	font-family: 'Source Sans Pro', sans-serif;
 	color: white !important;
 	font-weight: bolder;
 }
@@ -54,7 +63,6 @@ th, td {
 .navbar-expand-lg .nav-link {
 	padding-left: 1rem !important;
 	padding-right: 1rem !important;
-	font-family: 'Delius', cursive;
 	font-size: 1.1rem;
 }
 
