@@ -35,7 +35,7 @@ module.exports = {
         use: [
           {
             loader: "html-loader",
-            // options: { minimize: true }
+            options: { minimize: false }
           }
         ]
       },
@@ -83,23 +83,28 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       template: "src/index.html",
-      filename: "index.html"
+      filename: "index.html",
+      minify: false,
     }),
     new HtmlWebPackPlugin({
       template: "src/daycare-boarding.html",
-      filename: "daycare-boarding.html"
+      filename: "daycare-boarding.html",
+      minify: false,
     }),
     new HtmlWebPackPlugin({
       template: "src/training.html",
-      filename: "training.html"
+      filename: "training.html",
+      minify: false,
     }),
     new HtmlWebPackPlugin({
       template: "src/team.html",
-      filename: "team.html"
+      filename: "team.html",
+      minify: false,
     }),
     new HtmlWebPackPlugin({
       template: "src/contact.html",
-      filename: "contact.html"
+      filename: "contact.html",
+      minify: false,
     }),
   ],
   optimization: {
