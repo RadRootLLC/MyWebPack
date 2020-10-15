@@ -15,7 +15,7 @@ module.exports = {
     fontawesome: ["./src/js/fontawesome.js"]
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "build"),
     filename: "js/[name].js"
   },
   module: {
