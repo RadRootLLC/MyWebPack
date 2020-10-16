@@ -7,20 +7,6 @@ body {
 	background-color: $gray-200;
 }
 
-h1, h2, h3, h4 {
-	font-family: 'Source Sans Pro', sans-serif;
-	margin-bottom: 1rem;
-}
-
-.container > h2,
-.container > h3 {
-		margin-top: 2rem;
-}
-
-hr {
-	margin: 2.5rem 0;
-}
-
 table {
 	border: 2px solid $gray-500;
 }
@@ -44,7 +30,10 @@ th, td {
 .navbar {
 	background-color: $nav-background;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1rem;
 	text-transform: lowercase;
+	text-shadow: 1px 1px #000;
+	// display: none;
 }
 
 @supports (backdrop-filter: saturate(250%) blur(20px)) or (-webkit-backdrop-filter: saturate(250%) blur(20px)) {
@@ -58,39 +47,36 @@ th, td {
 .navbar-brand {
 	color: white !important;
 	font-weight: bolder;
+	font-size: 1.3rem;
 }
 
-.navbar-expand-lg .nav-link {
-	padding-left: 1rem !important;
-	padding-right: 1rem !important;
-	font-size: 1.1rem;
+.card {
+	font-size: .8rem;
+	margin-bottom: 1rem;
 }
 
-.jumbotron {
-	color: $gray-300;
-	background-color: transparent;
-	background-size: cover;
-	background-position: center center;
-	display: flex;
-}
-
-.jumbotron .text-container {
-	background-color: rgba(90, 90, 90, .5);
-	border-radius: 5px;
-}
-
-.jumbotron h1 {
-	text-shadow: 2px 2px 4px $dark;
-}
-
-.jumbotron .lead {
-	text-shadow: 1px 1px 2px $dark;
+.card-header {
+	color: $white;
+	background-color: $tld-blue;
+	font-size: 1rem;
+	padding: .5rem 1rem;
 }
 
 .card-title {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: bold;
-	margin-bottom: 1rem;
+	font-size: 1.75em;
+}
+
+.card-body {
+	padding: 1rem;
+}
+
+.card-body p:last-child {
+	margin-bottom: 0;
+}
+
+.card .btn {
+	font-size: 1em;
 }
 
 footer {
@@ -105,19 +91,29 @@ footer .contact {
 	color: $gray-300;
 }
 
+footer .social {
+	white-space: nowrap;
+	margin-bottom: 2rem;
+}
+
+footer .social a {
+	margin-right: 1rem;
+}
+
 footer #mc-embedded-subscribe {
 	padding: .25rem 1rem;
 }
 
 .testimonial {
 	font-family: 'Delius', cursive;
+  margin: 1rem 0;
 	text-align: center;
 }
 
 .testimonial blockquote {
 	font-size: 1.5rem;
-	margin-top: 2rem;
-	line-height: 3rem;
+	margin-top: 1.5rem;
+	line-height: 2rem;
 }
 
 .testimonial blockquote::before {
@@ -132,126 +128,171 @@ iframe {
 	border: none;
 }
 
-.jumbotron {
-	padding: 0;
-}
-
-@include media-breakpoint-up(xs) {
-	.jumbotron, .carousel-item {
-		min-height: 200px;
-	}
-
-	h1 {
-		font-size: 1.5rem;
-	}
-
-	h2 {
-		font-size: 1rem;
-	}
-}
-
 @include media-breakpoint-up(md) {
-	.jumbotron, .carousel-item {
-		min-height: 300px;
-	}
-
-	h1 {
-		font-size: 2.0rem;
-	}
-
-	h2 {
-		font-size: 1.5rem;
+	.lead {
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
 	}
 }
 
-@include media-breakpoint-up(lg) {
-	.jumbotron, .carousel-item {
-		min-height: 400px;
+.jumbotron {
+	color: $gray-300;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 0;
+	padding: 0;
+	margin-bottom: 1rem;
+
+	&::after {
+		height: 1rem;
+	  display: block;
+	  position: relative;
+	  background-image: $jumbotron-linear-gradient;
+	  width: 100%;
+	  content: '';
 	}
 
-	h1 {
-		font-size: 2.5rem;
+	@include media-breakpoint-up(xs) {
+		height: 50vw;
+
+		&::after {
+			top: unquote("calc(50vw - 1rem)");
+		}
 	}
 
-	h2 {
-		font-size: 2rem;
+	@include media-breakpoint-up(md) {
+		height: 40vw;
+
+		&::after {
+			top: unquote("calc(40vw - 1rem)");
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		height: 35vw;
+
+		&::after {
+			top: unquote("calc(35vw - 1rem)");
+		}
 	}
 }
 
 // -------
 // Home
 // --------
- .carousel {
-	width: 100%
+.jumbotron-home {
+	background-image: url("../images/tld/header-home.jpg");
+	background-position: 0% 30%;
 }
 
-#c1 {
-	background-image: url("../images/tld/home-c1.jpg");
-	background-position: 50% 30%;
-	background-size: cover;
-}
-
-#c2 {
-	background-image: url("../images/tld/home-c2.jpg");
-	background-position: 50% 65%;
-	background-size: cover;
-}
-
-#c3 {
-	background-image: url("../images/tld/home-c3.jpg");
-	background-position: 50% 65%;
-	background-size: cover;
-}
+// .jumbotron-home h1 {
+//     position: relative;
+//     left: 1289px;
+//     top: 536px;
+//     font-family: 'Source Sans Pro', sans-serif;
+//     font-size: 257px;
+//     font-weight: bold;
+//     color: hsla(184, 100%, 37%, 1);
+//     text-transform: lowercase;
+//     text-shadow: rgba(0, 0, 0, 0.25) -7px 4px 5px, rgba(249, 255, 255, 0.4) 0 -4px 30px;
+//     -webkit-transform: perspective(400px) rotateY(45deg) rotateZ(-3deg);
+//     transform: perspective(521px) rotateY(-7deg) rotateZ(1deg);
+// }
 
 // ------
 // Training
 // ------
 .jumbotron-training {
 	background-image: url("../images/tld/header-training.jpg");
-	background-position: 80% 30%;
+	background-position: 50% 20px;
+
+	@include media-breakpoint-up(md) {
+		background-position: 50% 30%;
+	}
 }
+// .jumbotron-training h1 {
+// 	position: relative;
+// 	left: 100px;
+// 	top: 500px;
+// 	font-family: 'Source Sans Pro', sans-serif;
+// 	font-size: 200px;
+// 	font-weight: bold;
+// 	color: $tld-blue;
+// 	text-transform: lowercase;
+// 	text-shadow: rgba(0,0,0,.2) 2px 6px 5px,rgba(255,255,255,.4) 0 -4px 30px;
+//   transform: perspective(400px) rotateY(45deg) rotateZ(-3deg);
+// }
 
 // ------
 // Daycare
 // ------
 .jumbotron-daycare {
 	background-image: url("../images/tld/header-daycare-boarding.jpg");
-	background-position: 50% 50%;
+	background-position: 50% 35px;
 }
+
+// .jumbotron-daycare h1 {
+//     position: relative;
+//     left: 1437px;
+//     top: 134px;
+//     font-family: 'Source Sans Pro', sans-serif;
+//     font-size: 200px;
+//     font-weight: bold;
+//     color: #00a5b1;
+//     text-transform: lowercase;
+//     -webkit-transform: rotate3d(-10, 0, 0, -45deg);
+//     transform: rotate3d(0, 0, 0, -45deg);
+//     text-shadow: 0 1px 1px #999, 0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777, 0 5px 0 #666, 0 6px 0 #555, 0 7px 0 #444, 0 8px 0 #333, 0 9px 7px #302314;
+//     transform: perspective(781px) rotateY(-15deg) rotateZ(15.5deg);
+//     line-height: 1em;
+// }
 
 // ------
-// About
+// Team
 // ------
-.jumbotron-about {
-	background-image: url("../images/tld/header-about.jpg");
-	background-position: center 25%;
+.jumbotron-team {
+	background-image: url("../images/tld/header-team.jpg");
+	background-position: 50% 10px;
+
+	@include media-breakpoint-up(md) {
+		background-position: 50% 25%;
+	}
 }
 
-.card {
-	margin-bottom: 1rem;
+// .jumbotron-team h1 {
+//     position: relative;
+//     left: 1548px;
+//     top: 300px;
+//     font-family: 'Source Sans Pro', sans-serif;
+//     font-size: 359px;
+//     font-weight: bold;
+//     color: #00a5b1;
+//     text-transform: lowercase;
+//     text-shadow: rgba(0, 0, 0, 0.2) 4px 2px 5px, rgba(255, 255, 255, 0) 0 0px 30px;
+//     /* -webkit-transform: perspective(400px) rotateY(45deg) rotateZ(-3deg); */
+//     /* transform: perspective(220px) rotateY(0deg) rotateZ(0deg); */
+// }
+
+.card.bio {
+	margin-bottom: 1.25rem;
 }
 
-.card-header {
-	font-weight: bold;
-	color: $white;
-	background-color: $tld-blue;
-}
-
-.card-body p:last-child {
+.card.bio h3 {
 	margin-bottom: 0;
 }
 
-.img-bio {
+.card.bio img {
 	float: left;
 	margin-right: 1rem;
 }
 
 .card-columns {
   @include media-breakpoint-only(xl) {
-    column-count: 3;
+    column-count: 2;
   }
   @include media-breakpoint-only(lg) {
-    column-count: 3;
+    column-count: 2;
   }
   @include media-breakpoint-only(md) {
     column-count: 1;
@@ -266,11 +307,32 @@ iframe {
 // -------
 .jumbotron-contact {
 	background-image: url("../images/tld/header-contact.jpg");
-	background-position: center 20%;
+	background-position: 0% 0%;
+
+	@include media-breakpoint-up(md) {
+		background-position: 0% 30%;
+	}
 }
+
+// .jumbotron-contact h1 {
+//     position: relative;
+//     left: -84px;
+//     top: 140px;
+//     font-family: 'Source Sans Pro', sans-serif;
+//     font-size: 460px;
+//     font-weight: bold;
+//     color: #00a5b1;
+//     text-transform: lowercase;
+//     text-shadow: rgba(0, 0, 0, 0.2) 4px 2px 5px, rgba(255, 255, 255, 0) 0 0px 30px;
+//     transform: perspective(243px) rotateY(-5deg) rotateZ(1deg);
+// }
 
 .contact li {
 	margin-top: 1rem;
+}
+
+.contact .map {
+	border: 1px solid $tld-blue;
 }
 
 fieldset {
