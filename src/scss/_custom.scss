@@ -33,7 +33,6 @@ th, td {
 	font-size: 1rem;
 	text-transform: lowercase;
 	text-shadow: 1px 1px #000;
-	// display: none;
 }
 
 @supports (backdrop-filter: saturate(250%) blur(20px)) or (-webkit-backdrop-filter: saturate(250%) blur(20px)) {
@@ -48,6 +47,10 @@ th, td {
 	color: white !important;
 	font-weight: bolder;
 	font-size: 1.3rem;
+}
+
+.navbar-brand img {
+  filter: drop-shadow(1px 1px 1px #000);	
 }
 
 .card {
