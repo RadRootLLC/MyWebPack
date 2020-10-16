@@ -12,3 +12,4 @@ temp
 
 # Files to ignore
 dist.zip
+.DS_Store
