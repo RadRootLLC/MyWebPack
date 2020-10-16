@@ -50,7 +50,7 @@ th, td {
 }
 
 .navbar-brand img {
-  filter: drop-shadow(1px 1px 1px #000);	
+  filter: drop-shadow(1px 1px 1px #000);
 }
 
 .card {
@@ -288,6 +288,11 @@ iframe {
 .card.bio img {
 	float: left;
 	margin-right: 1rem;
+}
+
+.card.bio .badges {
+	list-style-type: none;
+	padding-bottom: .5rem;
 }
 
 .card-columns {

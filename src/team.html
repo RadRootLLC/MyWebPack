@@ -42,51 +42,35 @@
 
 	<div class='container'>
 		<div class="card-columns">
-	    <div class="card bio">
-	      <div class="card-body">
-					<img class="img-bio" src="http://taillightsdogs.com/images/tld/employees/bio_stephanie.jpg" alt="Stephanie Brooks">
-					<h3>Stephanie Brooks</h3>
-					<h4>Owner</h4>
-					<p>Since Tail Lights Dogs’ beginnings, Stephanie Brooks has been instrumental in making the vision come alive. She has worked alongside Tail Lights’ founder Mira Jones in all aspects of managing and decision making, excelling each step of the way!</p>
-					<p>Through her knowledge of dog care and behavior, along with exceptional customer service, Stephanie personifies the mission of Tail Lights Dogs. She continues the mission: to provide a safe, welcoming facility, in which our clients may rest assured their dogs are carefully supervised, positively trained and warmly loved during all stages of their lives.</p>
-	      </div>
-	    </div>
+		{exp:channel:entries channel="bios" sort="asc"}
 			<div class="card bio">
-	      <div class="card-body">
-					<img class="img-bio" src="http://taillightsdogs.com/images/tld/employees/bio_lynn.jpg" alt="Lynn Bowden, DVM">
-					<h3>Lynn Bowden</h3>
-					<h4>DVM, Behavior Consultant</h4>
-					<p>Dr. Bowden’s special passion lies in the area of dog and cat behavior. Many hours of advanced study have made her uniquely qualified to assist Upstate families with pet behavior counseling to address and prevent serious behavior issues. Because our pets hold a place of great importance within the family, Dr. Bowden believes it is crucial to build a strong and healthy relationship with your dog from day one. The strongest relationships are based on mutual respect and a keen understanding of your dog’s needs. Tail Lights Dogs is extremely pleased to collaborate with Dr. Bowden to help our clients achieve fulfilling relationships with their life long companions.</p>
-	      </div>
-	    </div>
-	    <div class="card bio">
-	      <div class="card-body">
-					<img class="img-bio" src="http://taillightsdogs.com/images/tld/employees/Leah-Cook.jpg" alt="Leah Cook, ACDBC, CPDT–KA">
-					<h3>Leah Cook</h3>
-					<h4>ACDBC, CPDT–KA</h4>
-					<p>Leah is a professional dog trainer specializing in canine reactivity and aggression. She is a professional member of the <a href="http://www.apdt.com/" title="">Association of Professional Dog Trainers</a>, and has completed certifications to become an evaluator for the Canine Good Citizen test as well as a Certified Professional Dog Trainer – Knowledge Assessed. Leah has also met the rigid standards to become an <a href="http://iaabc.com/" title="">IAABC Associate Certified Dog Behavior Consultant</a>.</p>
-					<p>Leah greatly enjoys sharing her knowledge of the language of dogs with clients. Her focus is to ensure a strong bond of trust through communication between dogs and their people. Leah loves educating puppy parents on the importance of quality socialization, and helping them understand that prevention is key to avoiding life long fearful and aggressive behaviors.</p>
-					<p>Leah has been highly successful in developing behavior modification therapy and protocols for dogs suffering from reactivity or aggression.</p>
-	      </div>
-	    </div>
-			<div class="card bio">
-	      <div class="card-body">
-					<img class="img-bio" src="http://taillightsdogs.com/images/tld/employees/Lis-Chee-Awai.jpg" alt="Lis Chee-Awai">
-					<h3>Lis Chee-Awai</h3>
-					<h4>Trainer</h4>
-					<p>Lis is the newest member of the Tail Lights training team. With her enthusiasm for helping pups and their people and her natural talent for reading a dog’s body language we are thrilled to have her as an up-and-coming trainer. Currently Lis is teaching our Raising Rover babies how to grow up to be well-rounded adult dogs. Her passion is helping to prevent pups from developing behavioral concerns through fun, safe socialization and learning through play. Her long-term goals include helping shy and anxious pups become comfortable in the world around them.</p>
-	      </div>
-	    </div>
-			<div class="card bio">
-	      <div class="card-body">
-					<img class="img-bio" src="http://taillightsdogs.com/images/tld/employees/bio_mira.jpg" alt="Mira Jones">
-					<h3>Mira Jones</h3>
-					<h4>Founder, Consultant</h4>
-					<p>Mira Jones is an <a href="http://iaabc.com/" title="">IAABC Certified Dog Behavior Consultant</a> and a professional member of the Association of Pet Dog Trainers (APDT). In 2011, she was one of the first trainers in the East to complete the NACSW Certified Nose Work Instructor course, and for the past 9 years she has completed all requirements set forth by the Certification Council for Professional Dog Trainers. Mira is a Nosework Certifying Official and Judge for the <a href="http://www.ukcdogs.com/" title="">United Kennel Club (UKC)</a>.</p>
-					<p>Mira has more than 20 years&#8217; experience working with dogs and dog owners. She has trained hundreds of dogs of all breeds and temperaments, has taught group classes, written training curriculum, lectured on animal behavior, has completed graduate-level courses in <a href="http://en.wikipedia.org/wiki/Applied_Behavior_Analysis" title="">Applied Behavior Analysis</a>.</p>
-					<p> Mira&#8217;s interest in scent detection was the natural outgrowth of her fascination with <a href="http://en.wikipedia.org/wiki/Behavioral_ecology" title="">behavioral ecology</a>, the study of how animals behave in their evolutionary niche. For Mira, helping companion dogs through scent work is the perfect bridge between training and behavior, between dog and owner, and between urban realities and canine enrichment.</p>
-	      </div>
-	    </div>
+				<div class="card-body">
+					<img class="img-bio" src="{employee_picture}" alt="{employee_name}">
+					<h3>{employee_name}</h3>
+					<h4>{employee_title}</h4>
+					<p>{employee_bio}</p>
+					<ul class="badges">
+					{employee_certifications}
+						{if item == "APDT"}
+							<li><a href="https://www.apdt.com" target="_blank"><img src="/images/tld/cert_apdt.png" alt="Association of Pet Dog Trainers" width="55" height="35"></a></li>
+						{/if}
+						{if item == "CCPDT"}
+							<li><a href="https://ccpdt.org" target="_blank"><img src="/images/tld/cert_ccpdt.png" alt="Certification Council for Pet Dog Trainers" width="50" height="35"></a></li>
+						{/if}
+						{if item == "IAABC"}
+							<li><a href="https://iaabc.org" target="_blank"><img src="/images/tld/cert_iaabc.png" alt="International Association of Animal Behavior Consultants" width="70" height="35"></a></li>
+						{/if}
+						{if item == "NACSW"}
+							<li><a href="https://nacsw.net/" target="_blank"><img src="/images/tld/cert_nacsw.jpg" alt="National Association of Canine Scent Work" width="35" height="35"></a></li>
+						{/if}
+						{if item == "UKC"}
+							<li><a href="https://www.ukcdogs.com/" target="_blank"><img src="/images/tld/cert_ukc.jpg" alt="United Kennel Club" width="55" height="35"></a></li>
+						{/if}
+					{/employee_certifications}
+					</ul>
+				</div>
+			</div>
+		{/exp:channel:entries}
 		</div><!-- card-columns -->
 
 		<hr />
