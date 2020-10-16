@@ -167,9 +167,59 @@
 			<li><i class="fa-li fas fa-paw"></i>Scent Work</li>
 		</ul>
 
-		<p>(dynamic class listing here)</p>
-		<br>
+		<h2>Obedience Group Classes</h2>
+		{exp:channel:entries channel="classes" orderby="date" category="2|3" sort="asc"}
+			<div class="card">
+			  <h3 class="card-header">{title}</h3>
+			  <div class="card-body">
+					<p>
+						{if open_enroll}<em>{open_enroll}</em><br>{/if}
+						<strong>For</strong>: {class_group}<br>
+						<strong>Prerequisites</strong>: {class_prereq}<br>
+						<strong>When</strong>: {class_dates}<br>
+						<strong>Cost</strong>: {class_cost}<br>
+					</p>
+					<h4>We Cover:</h4>
+					{if skill_one}{skill_one}{/if}
+					{if skill_two}{skill_two}{/if}
+					{if skill_three}{skill_three}{/if}
+					{if skill_four}{skill_four}{/if}
+					{if skill_five}{skill_five}{/if}
+			  </div>
+			</div>
+		{/exp:channel:entries}
+
+    <a href="/contact.html" class="btn btn-primary btn-block">
+			<i class="fas fa-arrow-right"></i> Contact us to get started
+		</a>
+		<hr>
+
+		<h2>Nose Work Classes</h2>
+		{exp:channel:entries channel="classes" orderby="date" category="4" sort="asc"}
+			<div class="card">
+			  <h3 class="card-header">{title}</h3>
+			  <div class="card-body">
+					<p>
+						<strong>For</strong>: {class_group}<br>
+						<strong>Prerequisites</strong>: {class_prereq}<br>
+						<strong>Duration</strong>: {class_duration}<br>
+						<strong>Start Dates</strong>: {class_dates}<br>
+						<strong>Cost</strong>: {class_cost}<br>
+					</p>
+					<h4>We Cover:</h4>
+					{if skill_one}{skill_one}{/if}
+					{if skill_two}{skill_two}{/if}
+					{if skill_three}{skill_three}{/if}
+					{if skill_four}{skill_four}{/if}
+			  </div>
+			</div>
+		{/exp:channel:entries}
+
+    <a href="/contact.html" class="btn btn-primary btn-block">
+			<i class="fas fa-arrow-right"></i> Contact us to get started
+		</a>
 	</div><!-- container -->
+
 	<footer>
 		<div class='container'>
 			<div class="row">
