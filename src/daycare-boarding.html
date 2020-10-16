@@ -72,10 +72,10 @@
 
 		<div class="row testimonial">
 			<div class="col-sm-8 offset-sm-2">
-				<blockquote>
-					Boarding  is not an appropriate word for leaving your dog at Tail Lights dogs while you are away. It’s the only place I know of that has trained staff that stay at night should pets get lonely, afraid or need special attention.
-				</blockquote>
-				<cite>&mdash; Judy Stenhouse</cite>
+				{exp:channel:entries channel="testimonials" orderby="random" limit="1"}
+				<blockquote>{quote}</blockquote>
+				<cite>&mdash; {quote_author}</cite>
+				{/exp:channel:entries}
 			</div>
 		</div>
 

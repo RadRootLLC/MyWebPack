@@ -88,6 +88,17 @@
 	      </div>
 	    </div>
 		</div><!-- card-columns -->
+
+		<hr />
+
+		<div class="row testimonial">
+			<div class="col-sm-8 offset-sm-2">
+				{exp:channel:entries channel="testimonials" orderby="random" limit="1"}
+				<blockquote>{quote}</blockquote>
+				<cite>&mdash; {quote_author}</cite>
+				{/exp:channel:entries}
+			</div>
+		</div>
 	</div>
 
 	<footer>

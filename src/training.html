@@ -83,10 +83,10 @@
 
 		<div class="row testimonial">
 			<div class="col-sm-8 offset-sm-2">
-				<blockquote>
-					I'm learning a lot in class and Max is doing very well. Thanks for everything, this has been so helpful!
-				</blockquote>
-				<cite>&mdash; Terri Blackmon</cite>
+				{exp:channel:entries channel="testimonials" orderby="random" limit="1"}
+				<blockquote>{quote}</blockquote>
+				<cite>&mdash; {quote_author}</cite>
+				{/exp:channel:entries}
 			</div>
 		</div>
 
