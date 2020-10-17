@@ -8,12 +8,11 @@ module.exports = {
   devtool: "source-map",
   entry: {
     index: ["./src/index.js"],
-    fontawesome: ["./src/js/fontawesome.js"]
   },
   output: {
     path: path.join(__dirname, "build"),
     publicPath: '/',
-    filename: "js/[name].js"
+    filename: "bundle.[hash].js"
   },
   module: {
     rules: [
@@ -109,40 +108,6 @@ module.exports = {
       minify: false,
     }),
   ],
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        index: {
-          name: "index",
-          test: "index",
-          enforce: true
-        },
-        bootstrap: {
-          test: new RegExp("node_modules" + "\\" + path.sep + "bootstrap.*"),
-          chunks: "initial",
-          name: "bootstrap",
-          enforce: true
-        },
-        fontawesome: {
-          name: "fontawesome",
-          test: "fontawesome",
-          enforce: true
-        },
-        jquery: {
-          test: new RegExp("node_modules" + "\\" + path.sep + "jquery.*"),
-          chunks: "initial",
-          name: "jquery",
-          enforce: true
-        },
-        popper: {
-          test: new RegExp("node_modules" + "\\" + path.sep + "popper.*"),
-          chunks: "initial",
-          name: "popper",
-          enforce: true
-        }
-      }
-    }
-  },
   devServer: {
     host: "0.0.0.0",
     port: 3000,
